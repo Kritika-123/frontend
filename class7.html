@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .ele{
+            border:10px solid rgb(188, 99, 99);
+            margin:20px;
+            padding: 30px;
+            transition: transform 5s;
+        }
+        .ele:hover{
+            transform:rotate(360deg);
+        }
+    </style>
+</head>
+<body>
+    <div id="hello">
+    <form id="myform" class="ele">
+        <div id="main" class="ele">
+            <p id = "p1" class = "ele"></p>
+        </div>
+
+    </form>
+    <script>
+        p1.addEventListener("click",function(){
+            this.style.borderColor = 'red';
+        });
+        main.addEventListener("click",function(){
+            this.style.borderColor = 'green';
+        });
+        myform.addEventListener("click",function(){
+            this.style.borderColor = 'blue';
+        });
+    </script>
+    </div>
+</body>
+</html>

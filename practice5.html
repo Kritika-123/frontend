@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Thumbnail Gallery</title>
+<style>
+  .gallery {
+    display: flex;
+  }
+
+  .thumbnails img {
+    width: 100px;
+    height: auto;
+    cursor: pointer;
+    margin-right: 10px;
+  }
+
+  .full-image img {
+    max-width: 100%;
+    height: auto;
+  }
+</style>
+</head>
+<body>
+
+<div class="gallery">
+  <div class="thumbnails">
+    <img src="shinchan3.png" alt="Thumbnail 1" data-full="shinchan3.png" >
+    <img src="shinchan1.png" alt="Thumbnail 2" data-full="shinchan1.png">
+    <img src="shinchan2.png" alt="Thumbnail 3" data-full="shinchan2.png">
+  </div>
+  <div class="full-image">
+    <img src="shinchan1.png" alt="Full Image">
+  </div>
+</div>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const thumbnails = document.querySelectorAll('.thumbnails img');
+  const fullImage = document.querySelector('.full-image img');
+
+  thumbnails.forEach(thumbnail => {
+    thumbnail.addEventListener('click', function() {
+      const fullImageUrl = this.getAttribute('data-full');
+      fullImage.setAttribute('src', fullImageUrl);
+    });
+  });
+});
+</script>
+</body>
+</html>
+

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <!-- <H1><i><center>Registration form</center></i></H1> -->
+    <style>
+      .first{
+        text-align: center;
+      }
+    </style>
+</head>
+<body style="background-color: aqua;">
+  <h1 class="first"><i>Registration Form</i></h1>
+<form style="justify-content:center; display: flex;">
+    <fieldset style="background-color:rgb(252, 169, 208)">
+    <fieldset>
+    <legend>Name</legend>
+  <label for="fname">First name:</label>
+  <input type="text" id="fname" name="fname" placeholder="firstname" >
+  <label for="fname">Last name:</label>
+  <input type="text" id="lname" name="lname" placeholder="lastname" >
+    </fieldset>
+    <fieldset>
+        <legend>Age</legend>
+        <label for="Age">Age:</label>
+        <input type="number" placeholder="18">
+        </fieldset>
+  <fieldset>
+    <legend>Contact Details</legend>
+  <label for="email">Email:</label>
+  <input type="text" id="email" name="email"  placeholder="abc@gmail.com" ><br>
+  <label for="mobile">Mobile no:</label>
+  <input type="tel" id="mobile" name="mobile"  placeholder="1234567890"  maxlength="10" >
+  </fieldset>
+  <fieldset>
+    <legend>Password</legend>
+  <label for="pwd">Password:</label>
+  <input type="password" id="pwd" name="pwd" maxlength="8"><br>
+  <label for="pwd">Confirm Password:</label>
+  <input type="password" id="pwd" name="pwd" maxlength="8"><br>
+  </fieldset>
+  <fieldset>
+    <legend>Gender</legend>
+  <label for="Gender">Gender:</label><br>
+  <input type="radio" id="gender" name="gender">
+  <label for="Female">Female</label>
+  <input type="radio" id="gender" name="gender">
+  <label for="Male">Male</label><br>
+  </fieldset>
+  <fieldset>
+    <legend>Courses</legend>
+    <label for="Course">Course:</label><br>
+    <input type="checkbox"  >
+<label for="checkbox"> HTML.</label>
+<input type="checkbox"  >
+<label for="checkbox"> CSS.</label>
+<input type="checkbox"  >
+<label for="checkbox"> JavaScript.</label><br>
+<input type="checkbox" >
+<label for="checkbox"> Others course.<br>
+<textarea id="other course" name="othercourse" rows="2" cols="40" placeholder="write about the other course"></textarea></label>
+</fieldset>
+  <fieldset>
+    <legend>Country</legend>
+  <label for="country">Country:</label>
+  <select name="country" id="country">
+    <option value="India">India</option>
+    <option value="Nepal">Nepal</option>
+    <option value="China">China</option>
+    <option value="Bangladesh">Bangladesh</option>
+    </select><br>
+    </fieldset>
+    <fieldset>
+    <input type="checkbox"  >
+    <legend>Terms and conditions</legend>
+<label for="checkbox"> If you have read all the terms and conditions click on checkbox.</label><br>
+</fieldset><br>
+<center><i><input type="submit" style="background-color: rgb(147, 249, 208);" value="Submit">
+<input type="Reset" style="background-color: rgb(147, 249, 208);" value="Reset"></i></center>
+</fieldset>
+</form> 
+</body>
+</html>

@@ -1,0 +1,127 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>JavaScript Output</title>
+</head>
+ 
+<body>
+    <h1>LOVELY PROFESSIONAL UNIVERSITY</h1>
+    <h2>
+        JavaScript Display Possibilities
+        Using innerHTML
+    </h2>
+    <p id="GFG"></p>
+ 
+     Script to use innerHTML -->
+    <!-- <script>
+        document.getElementById("GFG").innerHTML = 10 * 2;
+        document.write(10 * 2);
+        window.alert(10 * 2);
+        console.log(10 * 2);
+        window.prompt("Please Enter your Input");
+        const fruit = ["Apple", "Orange", "Banana", "Mango"];
+        let len = fruit.length;
+        for (let i = 0; i < len; i++) {
+            document.write( fruit[i] );        }
+
+    </script> -->
+
+    <!-- <button onclick="myFunction()">Try it</button>
+<p id="demo"></p>
+<script>
+const fruits = ["Banana", "Orange", "Apple"];
+document.getElementById("demo").innerHTML = fruits;
+function myFunction() {
+  fruits.push( "Lemon");
+  document.getElementById("demo").innerHTML = fruits;
+} -->
+<!-- <input type="submit" onclick="abc()"> -->
+
+<!-- <script> -->
+<!-- //   function abc() 
+// {
+//     var retVal = prompt("Enter your name : ", "your name here");
+//                document.write("You have entered : " + retVal);
+
+//     var retVal = confirm("Do you want to continue ?");
+//                if( retVal == true ){
+//                   document.write ("User wants to continue!");
+//                   return true;
+//                }
+//                else{
+//                   document.write ("User does not want to continue!");
+//                   return false;
+//                }
+// }
+
+            //        function validate() {
+            //    	   alert("Validated");
+           	//    }    
+            
+            //    function over() {
+            //    document.write ("Mouse Over");
+            // }
+    //         setInterval(getCurrentDateTime, 1000);
+
+    //         function getCurrentDateTime() 
+    // {
+    //     document.getElementById("timeDiv").innerHTML = new Date();
+    // }
+
+//     var intervalId;
+
+// function startClock() 
+// {
+//     intervalId = setInterval(getCurrentDateTime, 1000);
+// }
+
+// function stopClock() 
+// {
+//     clearInterval(intervalId);
+// } -->
+
+<!-- <script> -->
+<!-- // <div id="timeDiv" ></div>
+// <input type="submit" onclick="getCurrentDateTime()"> -->
+<!-- <div onmouseover="over()">
+//     Hello LPU
+//     </div>        -->
+<!-- <form method="POST" onsubmit="return validate()">
+//          <input type="submit" value="Submit" >
+//       </form> -->
+<!-- 
+ </body>
+ </html>  -->
+
+
+ <html>
+<head>
+<script>
+function abc() 
+{
+   try
+{
+    // Referencing a function that does not exist cause an exception
+    document.write(sayHello());
+    // Since the above line causes an exception, the following line will not be executed
+    document.write("This line will not be executed");
+}
+// When an exception occurs, the control is transferred to the catch block
+catch (e)
+{
+    document.write("Description = " + e.description + "<br/>");
+    document.write("Message = " + e.message + "<br/>");
+    document.write("Stack = " + e.stack + "<br/><br/>");
+}
+finally
+{
+    document.write("This line is guaranteed to execute");
+}
+ 
+ }   
+</script>
+<head>
+<body>
+<input type="submit" onclick="abc()">
+</body>
+</html>

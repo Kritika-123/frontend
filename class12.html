@@ -1,0 +1,88 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style type="text/css">
+        .imgStyle{
+            width:100px;
+            height:100px;
+            border:3px solid grey;
+        }
+            </style>
+</head>
+<body>
+   <img id="mainImage" style="border:3px solid grey" src="shinchan1.png" height="500px" width="540px">
+   <br>
+   <div id="divID" onclick="changeImageOnClick()" onmouseover="f1()" onmouseout="f2()">
+    <img id="2" class="imgStyle" src="shinchan1.png">
+    <img id="3" class="imgStyle" src="shinchan2.png">
+    <img id="4" class="imgStyle" src="shinchan3.png">
+    <img id="5" class="imgStyle" src="shinchan4.png">
+</div>
+<script>
+    function changeImageOnClick(){
+        if(x.targetName=="IMG"){
+            a=x.getAttribute("src");
+            document.getElementById("mainImage").setAttribute("src",a);
+        }
+    }
+    function f1(){
+        x=even.target;
+        x.style.cursor='pointer';
+        a.style.borderColor='red';
+    }
+    function f2(){
+        x=even.target;
+        a.style.borderColor='grey';
+    }
+</script>
+</body>
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style type="text/css">
+        .imgStyle {
+            width: 100px;
+            height: 100px;
+            border: 3px solid grey;
+        }
+    </style>
+</head>
+<body>
+    <img id="mainImage" style="border: 3px solid grey;" src="shinchan1.png" height="500px" width="540px">
+    <br>
+    <div id="divID" onclick="changeImageOnClick(event)" onmouseover="f1(event)" onmouseout="f2(event)">
+        <img id="2" class="imgStyle" src="shinchan1.png">
+        <img id="3" class="imgStyle" src="shinchan2.png">
+        <img id="4" class="imgStyle" src="shinchan3.png">
+        <img id="5" class="imgStyle" src="shinchan4.png">
+    </div>
+    <img id="clickedImage" style="border: 3px solid grey;" src="" height="100px" width="100px">
+    <script>
+        function changeImageOnClick(event) {
+            if (event.target.tagName == "IMG") {
+                var source = event.target.getAttribute("src");
+                document.getElementById("mainImage").setAttribute("src", source);
+                document.getElementById("clickedImage").setAttribute("src", source); // Update clickedImage src
+            }
+        }
+        function f1(event) {
+            var target = event.target;
+            target.style.cursor = 'pointer';
+            target.style.borderColor = 'red';
+        }
+        function f2(event) {
+            var target = event.target;
+            target.style.borderColor = 'grey';
+        }
+    </script>
+</body>
+</html>
+

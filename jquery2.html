@@ -1,0 +1,64 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <!-- jQuery is a lightweight js library,reduces server load,faster content delivery,"write less do more" -->
+    <style>
+        body {
+            background-color: #30b8bc; 
+            font-family: Arial, sans-serif; 
+            margin: 0; 
+            padding: 0; 
+        }
+
+        h1 {
+            color: #333; 
+            text-align: center; 
+            margin-top: 20px; 
+        }
+
+        p {
+            color: #575757; 
+            font-size: 18px; 
+            margin: 20px; 
+        }
+
+        button {
+            background-color: #d0e475; 
+            border: none; 
+            color: white; 
+            padding: 10px 20px; 
+            text-align: center;
+            display: inline-block; 
+            font-size: 16px; 
+            margin: 10px; 
+            cursor: pointer;
+            border-radius: 5px; 
+        }
+
+        button:hover {
+            background-color: #242424; 
+        }
+    </style>
+    <script>
+        $(document).ready(function(){
+            $("#btn1").click(function(){
+                $("p").prepend("hello<br>");
+            });
+            $("#btn2").click(function(){
+                $("p").append("<br> how are you");
+            });
+        });
+    </script>
+</head>
+<body>
+<h1>LPU</h1>
+<p>Hey there</p>
+<button id="btn1">Prepend</button>
+<button id="btn2">Append</button>
+</body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Countdown Timer</title>
+<style>
+    body {
+        position: center;
+        font-family: Arial, sans-serif;
+        text-align: center;
+        background-color: rgb(212, 244, 255); 
+        padding: 20px; 
+    }
+
+    #timer {
+        font-size: 36px;
+        cursor: pointer; 
+        border: 5px solid;
+        width: 250px;
+        height: 200px;
+        border-radius: 25%;
+        background-color: rgb(64, 171, 171); 
+        padding: 20px; 
+        margin: 0 auto; 
+    }
+</style>
+</head>
+<body>
+<div id="timer">
+</div>
+
+<script>
+    const countdownTimeInMinutes = 1;
+    let timeRemaining = countdownTimeInMinutes * 60;
+
+    const timerDisplay = document.getElementById('timer');
+
+    function formatTime(seconds) {
+        const minutes = Math.floor(seconds / 60);
+        const remainingSeconds = seconds % 60;
+        return timerDisplay.textContent = minutes + ":" + (remainingSeconds < 10 ? '0' : '') + remainingSeconds;
+    }
+
+    function updateTimer() {
+        timerDisplay.textContent = formatTime(timeRemaining);
+
+        if (timeRemaining === 0) {
+            clearInterval(timerInterval);
+            timerDisplay.textContent = "Time's up!";
+        } 
+        else {
+            timeRemaining--;
+        }
+    }
+
+    updateTimer();
+    const timerInterval = setInterval(updateTimer, 1000);
+    document.addEventListener('click', function(event) {
+        if (event.target.id === 'timer') {
+            timeRemaining = countdownTimeInMinutes * 60;
+        }
+    });
+</script>
+</body>
+</html>

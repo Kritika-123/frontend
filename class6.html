@@ -1,0 +1,106 @@
+<!-- datetime -->
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="start()">Start</button>
+    <button onclick="stop()">Stop</button>
+    <p id="demo"></p>
+    <script>
+        //setInterval()
+        var i;
+        function start(){
+            i=setInterval(datetime,1000);
+        }
+        function datetime()
+        {
+            document.getElementById("demo").innerHTML=new Date();
+            document.getElementById("demo").style.fontSize="70px";
+            document.getElementById("demo").style.color="blue";
+            document.getElementById("demo").style.fontStyle="Italic";
+           // document.getElementById("demo").style.cssText="font-size: 70px; color:pink";
+
+        }
+        function stop(){
+            clearInterval(i);
+        }
+
+    </script>
+    
+</body>
+</html> -->
+
+
+
+
+
+<!-- after clicking 55 time it show erroe -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            text-align: center;
+
+        }
+       *{
+        background-color:rgb(0, 99, 99)
+       }
+        button{
+            cursor: pointer;
+            width:10%;
+            height:30px;
+            display: inline-block;
+            border-radius: 100%;
+            background-color: #62fac2;
+        }
+        </style>
+
+    
+</head>
+<body>
+    <div>
+    <button onclick="start()" style="">Start</button>
+    <button onclick="count()">Stop</button>
+    <p id="demo"></p>
+    <script>
+        //setInterval()
+        var i;
+        function start(){
+            i=setInterval(datetime,1000);
+        }
+        function datetime()
+        {
+            document.getElementById("demo").innerHTML=new Date();
+            document.getElementById("demo").style.fontSize="70px";
+            document.getElementById("demo").style.fontStyle="Italic";
+            document.getElementById("demo").style.color="cadetblue";
+        }
+        function stop(){
+            clearInterval(i);
+            document.getElementById("demo").innerHTML="";
+            document.getElementById("demo").innerText="Timeout";
+           // document.getElementById("demo").style.transform='';
+            document.getElementById("demo").style.transition='2s';
+            document.getElementById("demo").style.textAlign="center";
+
+        }
+        let c=0;
+        function count(){
+            c++;
+            if(c==5)
+            {
+                stop();
+            }
+        }
+    </script>
+    </div>
+</body>
+</html>

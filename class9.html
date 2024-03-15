@@ -1,0 +1,93 @@
+<!-- slideimage -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            position: relative;
+            padding: 0;
+            margin: 0;
+            background-color: rgb(0, 77, 77);
+            text-align: center;
+        }
+        
+        #container {
+            position: relative;
+            width: 40%;
+            margin: auto;
+            padding: 20px;
+        }
+        
+        #slide {
+            width: 100%;
+            max-width: 100%;
+            height: auto;
+        }
+        
+        #prevButton,
+        #nextButton {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            cursor: pointer;
+            background-color: rgba(255, 255, 255, 0.5);
+            border: none;
+            padding: 10px;
+            border-radius: 5px;
+            font-size: 18px;
+        }
+        
+        #prevButton {
+            left: 10px;
+        }
+        
+        #nextButton {
+            right: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <img id="slide" >
+        <button id="prevButton" onclick="prevImage()">Previous</button>
+        <button id="nextButton" onclick="nextImage()">Next</button>
+    </div>
+
+    <script>
+        var i = 0;
+        var images = ["shinchan1.png", "shinchan2.png", "shinchan3.png", "shinchan4.png"];
+
+        function changeImage() {
+            document.getElementById("slide").src = images[i];
+            if (i < images.length - 1) {
+                i++;
+            } else {
+                i = 0;
+            }
+            setTimeout(changeImage, 5000);
+        }
+        changeImage();
+
+        function nextImage() {
+            if (i < images.length - 1) {
+                i++;
+            } else {
+                i = 0;
+            }
+            document.getElementById("slide").src = images[i];
+        }
+
+        function prevImage() {
+            if (i > 0) {
+                i--;
+            } else {
+                i = images.length - 1;
+            }
+            document.getElementById("slide").src = images[i];
+        }
+    </script>
+</body>
+</html>
