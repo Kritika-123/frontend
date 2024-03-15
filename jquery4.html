@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <style>
+        .container{
+            background-color: beige;
+        }
+        .div1,.div2,.div3{
+            display:inline-block;
+            background-color: rgb(187, 187, 230);
+            margin:3px ;
+            width:680px;
+            height:300px;
+            position:relative;
+            border:2px solid blue;
+            border-radius:3px;
+        }
+        
+        .div3{
+           
+            left:300px
+        }
+        .img{
+            width:100px;
+            height:100px;
+            position: relative;
+            top:80px;
+            float:right;
+            right:80px;
+            background-color: blue;
+            color: white;
+            font-size: 20px;
+            border-radius: 4px;
+        }
+        .c1{
+            background-color: azure;
+            width:200px;
+            height:250px;
+            top:25px;
+            position:relative;
+            left:30px;
+            
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="div1">
+            <h2>text:</h2>
+            <p id="text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Officiis possimus tempora suscipit consequuntur corporis. Culpa hic a alias asperiores atque? Nobis corrupti tenetur reiciendis minima consectetur similique aspernatur magni molestias, iure saepe maiores, dicta eius, vitae id quidem non quaerat!
+            </p>
+        </div>
+        <div class="div2">
+            <input type="text" class="c1"  >
+            <input type="text" class="c1" >
+            <button class="img" id="b2">click me to change color</button>
+        </div>
+        <div class="div3">
+            <img src="handbook.jpg" width="60%" height="100%" id="i3">
+            <button class="img" id="b3">click me </button>
+        </div>
+    </div>
+    <script>
+        $(document).ready(function(){
+            $("#b3").click(function(){
+                $("#i3").fadeToggle();
+            });
+        });
+        $(document).ready(function(){
+            $("#b2").click(function(){
+                $(".c1").each(function(){
+                    var r="#"+Math.floor(Math.random()*16777215).toString(16);
+                    $(this).css('background-color', r);
+                });
+            });
+        });
+        $(document).ready(function(){
+            $("h2").css("text-align","center");
+            
+
+        })
+      
+    </script>
+    
+</body>
+</html>
