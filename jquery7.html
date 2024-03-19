@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jquery</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("#hideButton").click(function(){
+                $("#elementToHide").slideUp();
+            });
+        });
+        $(document).ready(function(){
+            $("#hideButton2").click(function(){
+                $("#elementToHide").slideDown();
+            });
+        });
+        $(document).ready(function(){
+            $("#hideButton3").click(function(){
+                $("#elementToHide").slideToggle();
+            });
+        });
+    
+    </script>
+</head>
+<body>
+<div id="elementToHide">
+   <img src="shinchan1.png" height=20% width=30%>
+</div>
+<button id="hideButton">Click me for slide up</button>
+<button id="hideButton2">Click me for slide down</button>
+<button id="hideButton3">Click me for Toggle</button>
+    
+</body>
+</html>
