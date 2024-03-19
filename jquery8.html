@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jquery</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("#fade-in-btn").click(function(){
+                $("#target").fadeIn();
+            });
+        });
+        $(document).ready(function(){
+            $("#fade-out-btn").click(function(){
+                $("#target").fadeOut();
+            });
+        });
+        $(document).ready(function(){
+            $("#fade-to").click(function(){
+                $("#target").fadeTo(100,0.3);
+            });
+        });
+        $(document).ready(function(){
+            $("#fade-toggle").click(function(){
+                $("#target").fadeToggle();
+            });
+        });
+
+        $(document).ready(function(){
+  $("#transition").click(function(){
+    $("#target").css('transform', 'rotate(360deg)');
+  });
+});
+</script>
+<style>
+    div {
+        transition: transform 0.5s ease; 
+    }
+</style>
+   
+</head>
+<body>
+<div id="target">
+   <img src="shinchan1.png" height=20% width=30%>
+</div>
+<button id="fade-in-btn">Click me for fade in</button>
+<button id="fade-out-btn">Click me for fade out</button>
+<button id="fade-to">Click me for To</button>
+<button id="fade-toggle">Click me for Toggle</button>
+<button id="transition">transition</button>
+    
+</body>
+</html>
