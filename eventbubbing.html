@@ -1,0 +1,77 @@
+<!-- <!DOCTYPE html>
+<html>
+<head>
+    <title>Event Bubbling Example</title>
+</head>
+<body>
+    <div id="parent">
+        <button id="child">Click me</button>
+    </div>
+
+    <script>
+        // Event bubbling example
+        document.getElementById('parent').addEventListener('click', function() {
+            alert('Parent element clicked!');
+        });
+
+        // Event handler for child button
+        document.getElementById('child').addEventListener('click', function() {
+            // event.stopPropagation(); // Prevent bubbling to parent
+            alert('Child button clicked!');
+        });
+    </script>
+</body>
+</html> -->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Image Gallery with Thumbnails</title>
+    <style>
+        .thumbnails img {
+            width: 100px;
+            height: 100px;
+            cursor: pointer;
+            transition: transform 0.2s;
+        }
+        .thumbnails img:hover {
+            transform: scale(1.1);
+        }
+        .main-image {
+            width: 400px;
+            height: 400px;
+        }
+    </style>
+</head>
+<body>
+    <h2>Image Gallery with Thumbnails</h2>
+
+    <!-- Thumbnails for the image gallery -->
+    <div class="thumbnails" id="thumbnailContainer">
+        <img src="shinchan1.png" onclick="showImage('shinchan1.png')">
+        <img src="shinchan2.png" onclick="showImage('shinchan2.png')">
+        <img src="shinchan3.png" onclick="showImage('shinchan3.png')">
+    </div>
+
+    <!-- Main image display -->
+    <img src="shinchan1.png" class="main-image" id="mainImage">
+
+    <script>
+        // Function to display the selected image in the main area
+        function showImage(imageSrc) {
+            document.getElementById('mainImage').src = imageSrc;
+        }
+          // Event listener for the thumbnail container
+          document.getElementById('thumbnailContainer').addEventListener('click', function(event) {
+            // Check if the clicked target is an image
+            if (event.target.tagName === 'IMG') {
+                // Extract image source from the clicked thumbnail
+                var imageSrc = event.target.src;
+                // Call showImage function with the image source
+                showImage(imageSrc);
+            }
+        });
+    </script>
+</body>
+</html>
+

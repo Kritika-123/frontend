@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Image Gallery with Thumbnails</title>
+<style>
+  .gallery-container {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .gallery-thumbnail {
+    width: 100px;
+    height: 100px;
+    margin: 5px;
+    cursor: pointer;
+  }
+
+  .gallery-thumbnail img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .main-image {
+    width: 400px;
+    height: 400px;
+    margin: 10px;
+  }
+</style>
+</head>
+<body>
+
+<div class="gallery-container">
+  <div class="gallery-thumbnail" onclick="showImage(0)">
+    <img src="shinchan1.png" alt="Thumbnail 1" height="250px" width="250px">
+  </div>
+  <div class="gallery-thumbnail" onclick="showImage(1)">
+    <img src="shinchan2.png" alt="Thumbnail 2" height="250px" width="250px">
+  </div>
+  <div class="gallery-thumbnail" onclick="showImage(2)">
+    <img src="shinchan3.png" alt="Thumbnail 3" height="250px" width="250px">
+  </div>
+</div>
+<div class="main-image">
+  <img id="mainImage" src="shinchan4.png" alt="Main Image" height="250px" width="250px">
+</div>
+
+<script>
+  function showImage(imageIndex) {
+    const mainImage = document.getElementById('mainImage');
+    const images = ['shinchan1.png', 'shinchan2.png', 'shinchan3.png']; // Add your image URLs here
+    mainImage.src = images[imageIndex];
+  }
+</script>
+
+</body>
+</html>

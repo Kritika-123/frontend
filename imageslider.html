@@ -1,0 +1,65 @@
+<!-- <!DOCTYPE html>
+<html>
+<head>
+    <title>JavaScript Image Slideshow</title>
+</head>
+<body>
+    <img id="slideshow" src="shinchan1.png" width="400" height="300">
+
+    <script>
+        var images = ['shinchan1.png', 'shinchan2.png', 'shinchan3.png'];
+        var currentIndex = 0;
+
+        function slideshow() {
+            document.getElementById('slideshow').src = images[currentIndex];
+            currentIndex = (currentIndex + 1) % images.length;
+            setTimeout(slideshow, 2000); // Change image every 2 seconds
+        }
+
+        slideshow(); // Start the slideshow
+    </script>
+</body>
+</html> -->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Form Validation</title>
+</head>
+<body>
+    <form>
+        <input type="text" id="name" placeholder="Enter your name">
+        <input type="number" id="rollno" >
+        <input type="email" id="email" >
+        <button onclick="validateForm()">Submit</button>
+    </form>
+
+    <script>
+        function validateForm() {
+            var name = document.getElementById('name').value;
+            if (name === '') {
+                alert('Please enter your name');
+                return false;
+            } 
+            var rollno=document.getElementById('rollno').value;
+            if (rollno <= 1 ) {
+                alert('Please not valid');
+                return false;
+            }
+            
+            var email=document.getElementById('email').value;
+            if(validemail(email)){
+                alert ("not valid");
+            }
+             else {
+                alert('Form submitted successfully');
+                return true;
+            }
+            function validemail(email){
+                var mail=/^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                mail.test(email);
+            }
+        }
+    </script>
+</body>
+</html>
