@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Image Gallery with Thumbnails</title>
+    <style>
+        .thumbnails img {
+            width: 100px;
+            height: 100px;
+            cursor: pointer;
+            transition: transform 0.2s;
+        }
+        .thumbnails img:hover {
+            transform: scale(1.1);
+        }
+        .main-image {
+            width: 400px;
+            height: 400px;
+        }
+    </style>
+</head>
+<body>
+    <h2>Image Gallery with Thumbnails</h2>
+
+    <!-- Thumbnails for the image gallery -->
+    <div class="thumbnails">
+        <img src="image1.jpg" onclick="showImage('image1.jpg')">
+        <img src="image2.jpg" onclick="showImage('image2.jpg')">
+        <img src="image3.jpg" onclick="showImage('image3.jpg')">
+    </div>
+
+    <!-- Main image display -->
+    <img src="image1.jpg" class="main-image" id="mainImage">
+
+    <script>
+        // Function to display the selected image in the main area
+        function showImage(imageSrc) {
+            document.getElementById('mainImage').src = imageSrc;
+        }
+    </script>
+</body>
+</html>

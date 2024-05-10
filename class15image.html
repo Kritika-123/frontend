@@ -25,6 +25,11 @@
 <html>
 <head>
     <title>Form Validation</title>
+    <style>
+        form{
+            border:10px;
+        }
+    </style>
 </head>
 <body>
     <form>
@@ -46,7 +51,6 @@
                 alert('Please not valid');
                 return false;
             }
-            
             var email=document.getElementById('email').value;
             if(validemail(email)){
                 alert ("not valid");
